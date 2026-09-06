@@ -1,0 +1,4 @@
+"use client"; import {createContext,useContext,useEffect,useState} from "react";
+export type Food={id:string;name:string;price:number;image:string;category:string;description:string};
+type CartItem=Food&{qty:number}; const C=createContext<any>(null);
+export function CartProvider({children}:{children:React.ReactNode}){const [items,setItems]=useState<CartItem[]>([]);useEffect(()=>{const x=localStorage.getItem("tasty-cart");if(x)setItems(JSON.parse(x))},[]);useEffect(()=>localStorage.setItem("tasty-cart",JSON.stringify(items)),[items]);const add=(f:Food)=>setItems((p:any)=>{const e=p.find((x:CartItem)=>x.id===f.id);return e?p.map((x:CartItem)=>x.id===f.id?{...x,qty:x.qty+1}:x):[...p,{...f,qty:1}]});const remove=(id:string)=>setItems((p:any)=>p.filter((x:CartItem)=>x.id!==id));const total=items.reduce((a:number,x:CartItem)=>a+x.price*x.qty,0);return <C.Provider value={{items,add,remove,total,setItems}}>{children}</C.Provider>} export const useCart=()=>useContext(C);

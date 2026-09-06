@@ -1,0 +1,16 @@
+export const menu=[
+	{id:"1",name:"Butter Chicken",price:16.9,category:"Chicken",description:"Creamy tomato curry with aromatic spices.",image:"https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=900&q=80"},
+	{id:"2",name:"Royal Biryani",price:18.5,category:"Rice",description:"Fragrant basmati rice, herbs and signature spices.",image:"https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=900&q=80"},
+	{id:"3",name:"Paneer Masala",price:14.9,category:"Vegetarian",description:"Indian cottage cheese in rich masala sauce.",image:"https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=900&q=80"},
+	{id:"4",name:"Tandoori Grill",price:21.9,category:"Grill",description:"Char-grilled selection served with fresh herbs.",image:"https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=900&q=80"},
+	{id:"5",name:"Mango Lassi",price:5.5,category:"Drinks",description:"Fresh mango yogurt drink.",image:"https://images.unsplash.com/photo-1546173159-315724a31696?auto=format&fit=crop&w=900&q=80"},
+	{id:"6",name:"Saffron Dessert",price:7.9,category:"Dessert",description:"Sweet saffron dessert with pistachio.",image:"https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=900&q=80"},
+	{id:"7",name:"Samosa Chaat",price:8.5,category:"Starters",description:"Crisp samosas topped with chickpeas, yogurt and chutneys.",image:"https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?auto=format&fit=crop&w=900&q=80"},
+	{id:"8",name:"Chicken Tikka",price:15.5,category:"Chicken",description:"Tender chicken pieces marinated in yogurt and tandoori spices.",image:"https://images.unsplash.com/photo-1532550907401-a500c9a57435?auto=format&fit=crop&w=900&q=80"},
+	{id:"9",name:"Lamb Rogan Josh",price:19.9,category:"Lamb",description:"Slow-cooked lamb with Kashmiri chilli, ginger and warm spices.",image:"https://images.unsplash.com/photo-1545247181-516773cae754?auto=format&fit=crop&w=900&q=80"},
+	{id:"10",name:"King Prawn Masala",price:22.5,category:"Seafood",description:"Juicy prawns simmered in a fragrant tomato masala.",image:"https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?auto=format&fit=crop&w=900&q=80"},
+	{id:"11",name:"Dal Makhani",price:13.5,category:"Vegetarian",description:"Black lentils slow-cooked with cream, butter and spices.",image:"https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=900&q=80"},
+	{id:"12",name:"Garlic Naan",price:4.5,category:"Sides",description:"Soft tandoor-baked naan finished with garlic and coriander.",image:"https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?auto=format&fit=crop&w=900&q=80"},
+	{id:"13",name:"Masala Chai",price:4.2,category:"Drinks",description:"Fragrant black tea infused with cardamom, ginger and cinnamon.",image:"https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?auto=format&fit=crop&w=900&q=80"},
+	{id:"14",name:"Gulab Jamun",price:6.5,category:"Dessert",description:"Warm milk dumplings soaked in rose and cardamom syrup.",image:"https://images.unsplash.com/photo-1601303516534-89f7a3d3b2e4?auto=format&fit=crop&w=900&q=80"}
+];

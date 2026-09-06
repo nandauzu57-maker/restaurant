@@ -1,0 +1,1 @@
+import {NextResponse} from "next/server"; export async function POST(){return NextResponse.json({ok:true,message:"Stripe webhook endpoint ready. Add STRIPE_WEBHOOK_SECRET and verification logic before production."})}

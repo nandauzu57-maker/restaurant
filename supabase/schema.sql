@@ -1,0 +1,9 @@
+create extension if not exists "pgcrypto";
+create table if not exists categories(id uuid primary key default gen_random_uuid(),name text not null,slug text unique not null);
+create table if not exists menu_items(id uuid primary key default gen_random_uuid(),name text not null,slug text unique not null,description text,price numeric(10,2) not null,image_url text,category_id uuid references categories(id),is_available boolean default true,is_featured boolean default false,created_at timestamptz default now());
+create table if not exists orders(id uuid primary key default gen_random_uuid(),customer_name text not null,email text not null,phone text,order_type text default 'pickup',total numeric(10,2) not null,payment_status text default 'pending',order_status text default 'pending',stripe_session_id text,created_at timestamptz default now());
+create table if not exists order_items(id uuid primary key default gen_random_uuid(),order_id uuid references orders(id) on delete cascade,menu_item_id uuid references menu_items(id),quantity integer not null check(quantity>0),price numeric(10,2) not null);
+create table if not exists reservations(id uuid primary key default gen_random_uuid(),customer_name text not null,email text not null,phone text,reservation_date date not null,reservation_time time not null,guests integer not null,table_number text,notes text,status text default 'pending',created_at timestamptz default now());
+alter table categories enable row level security; alter table menu_items enable row level security; alter table orders enable row level security; alter table order_items enable row level security; alter table reservations enable row level security;
+create policy "public read categories" on categories for select using (true);
+create policy "public read menu" on menu_items for select using (true);
